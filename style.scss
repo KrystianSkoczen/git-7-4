@@ -1,13 +1,19 @@
+$fonts: "Open Sans", sans-serif;
+$dark_graphite: #313234;
+$white: #fff;
+$gray: #696b70;
+$little_blue: #33ccff;
+$hundred: 100%;
+
 * {
 	box-sizing: border-box;	
 }
 body {
 	margin: 0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $fonts;
 }
 header {
-	background-color: #313234;
-	
+	background-color: $dark_graphite;
 }
 .row::before, .row::after {
 	content:"";
@@ -21,7 +27,7 @@ header {
 	overflow: auto;	
 }
 .container {
-	width: 100%;
+	width: $hundred;
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -34,18 +40,17 @@ header {
 .nav_link {
 	line-height: 50px;
 	display: block;
-	color: #fff;
+	color: $white;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 .nav_link:hover {
-	color:#696b70;
+	color:$gray;
 }
 
 .hero {
 	background-image: url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=37c91c8e3f63462e0739c676dfe8fee8&auto=format&fit=crop&w=750&q=80);	
-	width: 100%;
-	padding-top: 42vh;
+	width: $hundred;
 	text-align: right;
 	background-size: cover;
 	background-position: center;
@@ -54,13 +59,12 @@ header {
 .slogan {
 	background-color: rgba(102, 102, 204, 0.4);
 	float: right;
-	max-width: 800px;  /*coś tu miało być ale nie pamiętam jaka wartość*/
+	max-width: 800px;
 	padding: 15px;
 	margin: 100px 0;
 }
 [class*="col-"] {
-	width: 100%;
-	padding: 12px;
+	width: $hundred;
 	float: left;
 	min-height: 1px;
 	text-align: center;
@@ -101,7 +105,7 @@ header {
 	width: 91.66%;
 }
 .col-12 {
-	width: 100%;
+	width: $hundred;
 }
 .col-offset-1 {
 	margin-left: 8.33%;
@@ -157,15 +161,15 @@ section>.container {
 	padding: 50px 5px 25px 5px;	
 }
 .blue {
-	color: #313234;
+	color: $dark_graphite;
 	padding: 0 30px 70px 30px;
 }
 .blue:hover {
-	color: #33ccff;	
+	color: $little_blue;	
 	cursor: pointer;
 }
 .h3 {
-	color: #313234;
+	color: $dark_graphite;
 	font-weight: 800;
 }
 .center {
@@ -173,22 +177,23 @@ section>.container {
 }
 .img-square {
 	float: left;
-	height: 100%;
-	width: 100%;
+	height: $hundred;
+	width: $hundred;
 }
 .img-rectangle {
 	float: left;
-	height: 100%;
-	width: 100%;
+	height: $hundred;
+	width: $hundred;
 }
 .hover:hover .layer { 
 	display: block; 
 	position: absolute; 
 	cursor: pointer;
+	
 }
 .team img {
-	height: 100%;
-	width: 100%;
+	height: $hundred;
+	width: $hundred;
 	border-radius: 50%;
 }
 /* 
@@ -198,13 +203,12 @@ start team
 	margin: 0 auto;
 }
 img {
-	max-width: 100%;
+	max-width: $hundred;
 }
-
 .layer {
 	background: rgba(0, 0, 0, 0.5);
-	width: 100%;
-	height: 100%;
+	width: $hundred;
+	height: $hundred;
 	position: absolute;
 	display: none;
 }
@@ -212,7 +216,6 @@ img {
 .hover {
 	position: relative;
 }
-
 .hover:hover .layer {
 	display: flex;
     justify-content: space-around;
@@ -221,33 +224,31 @@ img {
 .team__image {
 	border-radius: 50%;
 }
-
 .team__layer {
 	background: rgba(0, 0, 0, 0.5);
-	width: 100%;
-	height: 100%;
+	width: $hundred;
+	height: $hundred;
 	position: absolute;
 	display: none;
 	border-radius: 50%;
 	justify-content: center;
 	align-items: center;
-	color: #fff;
+	color: $white;
 	font-size: 18px;
 }
 .team__hover {
 	position: relative;
 	margin: 0 20px;
-	
 }
 .team__hover:hover .team__layer {
 	display: flex;
 } 
-.team_title {
-	font-weight: bold;
-	font-size: 20px;
-}
 .team_name {
 	font-weight: bold;
+}
+.team__title {
+	@extend .team_name;
+	font-size: 20px;
 }
 /* end team*/
 .tablet {
@@ -264,32 +265,34 @@ img {
 .numbers {
 	padding: 0 25px 40px 25px;
 }
-.numbers h4 {
+.numbers {
+	h4 {
 	font-size: 80px;
 	margin-bottom: 0;
-}
-.numbers p {
+	}
+	 p {
 	font-size: 30px;
 	font-weight: bold;
-	color: #33ccff;
+	color: $little_blue;
 	margin-top: 0;
+	}
 }
 .address p {
 	text-align: left;	
 }
 .footer {
-	background-color: #313234;	
-	color: #fff;
+	background-color: $dark_graphite;	
+	color: $white;
 	text-align: left;
 	padding: 25px 25px 0 25px;
 }
 .social {
-	background-color: #33ccff;
-	color: #fff;
+	background-color: $little_blue;
+	color: $white;
 }
 button {
 	border: none;
-	background-color: #33ccff;
+	background-color: $little_blue;
 	padding: 7px;
 	display: inline-block;
 	width: 11%;
@@ -301,7 +304,7 @@ button:hover {
 }
 .footer-bottom {
 	background-color: #272c33;
-	color: #fff;
+	color: $white;
 	padding-top: 15px;
 	padding-bottom: 15px;	
 }
@@ -311,26 +314,59 @@ button:hover {
 @media (max-width: 767px){
     .col-1 {width: 50%;}
     .col-2 {width: 50%;}
-    .col-3 {width: 100%;}
-    .col-4 {width: 100%;}
-    .col-5 {width: 100%;}
-    .col-6 {width: 100%;}
-    .col-7 {width: 100%;}
-    .col-8 {width: 100%;}
-    .col-9 {width: 100%;}
-    .col-10 {width: 100%;}
-    .col-11 {width: 100%;}
-    .col-12 {width: 100%;}
-
-	.hover:hover .layer { 
-		display: block; 
-		position: absolute; 
-		cursor: pointer;
+    .col-3 {width: $hundred;}
+    .col-4 {width: $hundred;}
+    .col-5 {width: $hundred;}
+    .col-6 {width: $hundred;}
+    .col-7 {width: $hundred;}
+    .col-8 {width: $hundred;}
+    .col-9 {width: $hundred;}
+    .col-10 {width: $hundred;}
+    .col-11 {width: $hundred;}
+    .col-12 {width: $hundred;}
+   
+   	li {
+		float: left;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
+    .nav_img {
+    padding-left: 30%;
+    }
 	.nav_li {
 		display: block;
 	}
 	.nav_ul {
 		float: none;
+		text-align: center;
+	}
+	.layer {
+		display: block;
+	}
+	.hover .layer {
+		display: flex;
+	    justify-content: space-around;
+	    align-items: center;
+	}
+	.team__layer {
+		display: block;
+	}
+	.team__hover .team__layer {
+		display: flex; 
+	}
+	.numbers h4 {
+		margin-top: 0;
+	}
+	button {
+		width: 25%;
+	}
+	.awesome {
+		columns: 1;
+	}
+	.tablet {
+		display: none;	
+	}
+	.footer_table h5{
+		margin-bottom: 0;
 	}
 }
